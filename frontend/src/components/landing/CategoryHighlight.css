@@ -1,0 +1,24 @@
+.glass-card {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.04); /* base transparan */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px 4px rgba(255, 193, 7, 0.6); /* glow kuning */
+  border: 1px solid #ffc107;
+  background: rgba(255, 255, 255, 0.06); /* tetap sama, tidak jadi putih */
+}
+
+.glass-card .card-title.fw-bold {
+  color: white !important;
+}
+
+.glass-card:hover .card-title.fw-bold {
+  color: white !important;
+}
+
