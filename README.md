@@ -61,7 +61,6 @@ Seluruh proses operasional yang sebelumnya dilakukan secara manual kini terpusat
 - Melihat Daftar dan Detail Pesanan
 - Mengelola Feedback Pelanggan
 
-
 ---
 
 ## 📬 Kontak & Pengembang
@@ -70,8 +69,36 @@ Seluruh proses operasional yang sebelumnya dilakukan secara manual kini terpusat
 Pengembang utama sistem  
 GitHub: [@hitoriizumi](https://github.com/hitoriizumi)
 
----
-
 ## 📝 Lisensi
 
 Proyek ini dikembangkan sebagai sistem internal. Distribusi kode diatur sesuai kebutuhan pemilik proyek.
+
+---
+
+
+## 📝 Catatan Pengembangan
+
+- Pastikan MySQL dan PHP versi 8.2+ telah terpasang di perangkat lokal.
+- Sistem menggunakan Laravel Sanctum untuk autentikasi berbasis role.
+- Session Storage digunakan di frontend untuk menyimpan token autentikasi per-role.
+- Fitur lupa password dan email notifikasi menggunakan Mailtrap untuk pengujian email di lingkungan lokal.
+- Project ini belum di-deploy dan masih dijalankan secara lokal.
+---
+
+## ⚡ Instalasi & Menjalankan Proyek
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/hitoriizumi/tugasakhir-igamerworld.git
+cd tugasakhir-igamerworld
+
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+php artisan db:seed
+npm install
+
+php artisan serve
+npm run dev
+http://localhost:5173
